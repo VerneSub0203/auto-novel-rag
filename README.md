@@ -1,7 +1,6 @@
 # auto-novel-rag
 An interactive novel generator powered by local LLM (MLX) and Wikipedia RAG. Features 2-stage XML plot building and infinite story loops. （ローカルLLMとWikipediaのRAGを組み合わせた、無限対話型の歴史小説ジェネレーター）
 
-ローカル環境の軽量LLM（Apple Silicon / MLX環境）と、Wikipediaからの自動スクレイピング（RAG）を組み合わせた、時代小説・歴史フィクションの自動生成パイプラインです。
 
 モデルのコンテキスト汚染やキャラクター崩壊を防ぐため、最新のLLMオーケストレーション手法（RAGによる史実バインドと、XMLタグを用いた2段階生成システム）で実装しています。
 
