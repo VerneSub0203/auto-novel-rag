@@ -26,7 +26,11 @@ def fetch_full_text(url, char_name=""):
         return "" 
 
     try:
-        response = requests.get(url, timeout=10)
+        # Wikipediaに「私は悪意のないローカルBotです」と名乗る
+        headers = {
+            'User-Agent': 'HistoricalNovelRAGBot/1.0 (Learning purpose)'
+        }
+        response = requests.get(url, headers=headers, timeout=10)
         soup = BeautifulSoup(response.text, 'html.parser')
         
         # Wikipediaの不要な構造（テーブル、ナビゲーション等）を事前削除
